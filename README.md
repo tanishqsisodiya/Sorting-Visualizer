@@ -1,7 +1,6 @@
 # Sorting_Visualizer
 <!-->
-Hello everyone This project is inspired from clement mihailescu and with the help of Kethantummala 
-https://github.com/Kethantummala/Sorting_Visualizer
+Hello everyone This project is inspired from clement mihailescu
 !-->
 A web application showcasing the inner workings of sorting algorithms.
 
