@@ -4,6 +4,7 @@
     *****************
 */
 * {
+  
   margin: 0px;
   padding: 0px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -12,29 +13,45 @@
   text-transform: uppercase;
 }
 
+* {  box-sizing: border-box;}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 nav {
-  background-color: #3b3a3a;
-  color: white;
+  background-color: #212529;
+  color: #B19F9E;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 30% 60%;
-      grid-template-columns: 30% 60%;
-  -webkit-column-gap: 10%;
-          column-gap: 10%;
-  padding: 0% 5%;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  -webkit-column-gap: 5%;
+          column-gap: 5%;
+  padding: 0% 0%;
 }
 
 nav .array-inputs {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 60% 40%;
-      grid-template-columns: 60% 40%;
+  -ms-grid-columns: 50% 40%;
+      grid-template-columns: 40% 60%;
   place-content: center;
-  padding: 5% 0%;
+  padding-top: 4%;
+  margin: 0% 0% 0px 5%;
+}
+nav .array-inputs > p{
+  margin-top: 5px ;
+  margin-bottom: 5px ;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 nav .array-inputs #a_size {
   padding: 5% 0%;
+  
 }
 
 nav .array-inputs #a_speed {
@@ -45,13 +62,22 @@ nav .array-inputs #a_generate {
   background-color: transparent;
   border: none;
   outline: none;
-  color: white;
-  padding: 4% 0% 0% 0%;
-  padding-left: 20%;
+  color: #B19F9E;
+  padding: 2px;
+  margin: 4% 0% 0% 0%;
+  margin-top: 10%;
+  margin-left: 20%;
+  padding: 10px 0px 10px 0;
+  width: 100%;
 }
 
 nav .array-inputs #a_generate:hover {
+  border-radius: 3px;
+  background-color:#B19F9E;;
+  border: 1px solid ;
+  color:#212529;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 nav .header_right {
@@ -62,35 +88,43 @@ nav .header_right {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+       
 }
 
 nav .header_right .nav-heading {
   display: inline-block;
-  font-size: xxx-large;
+  font-size: xx-large;
   padding: 3% 0%;
 }
 
 nav .header_right .algos {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (16.66667%)[6];
-      grid-template-columns: repeat(6, 16.66667%);
-  place-content: center;
-  padding: 2% 0%;
+  -ms-grid-columns: (10%)(1);
+      grid-template-columns: repeat(2, 45%);
+      place-content: center;
+      margin-bottom: 3px;
 }
 
 nav .header_right .algos button {
   background-color: transparent;
   border: none;
-  color: white;
+  color: #B19F9E;
   outline: none;
   padding: 5% 0%;
-  font-size: x-large;
+  font-size: 100%;
+  width: 100%;
 }
 
 nav .header_right .algos button:hover {
-  background-color: blue;
+  /* //while working */
   cursor: pointer;
+  border-radius: 3px;
+  background-color: #B19F9E;
+  border: 1px solid ;
+  color:white; 
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 nav .header_right .algos .butt_locked {
@@ -101,24 +135,30 @@ nav .header_right .algos .butt_locked {
 nav .header_right .algos .butt_locked:hover {
   background-color: transparent;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 nav .header_right .algos .butt_selected {
+  border-radius: 3px;
   background-color: white;
-  color: green;
+  color: #B19F9E;
 }
 
 nav .header_right .algos .butt_selected:hover {
-  background-color: white;
+  background-color: #B19F9E;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 nav .header_right .algos .butt_unselected:hover {
-  background-color: blue;
+  background-color: #B19F9E;
+  color: white;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 section {
+  background-color: white;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20% 60% 20%;
@@ -170,25 +210,52 @@ section #Info_Cont2 h3 {
   display: none;
 }
 
-/*
-@media (max-width: 480px)//Mobiles
-{
-    
+
+@media screen and (min-width: 720px) {
+  nav .header_right .nav-heading {
+    display: inline-block;
+    font-size: xxX-large;
+    padding: 3% 0%;
+  }
+  nav .header_right .algos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (10%)(1);
+        grid-template-columns: repeat(3, 30%);
+        place-content: center;
+  }
+  nav .array-inputs #a_generate {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #B19F9E;
+    padding: 2px;
+    margin: 4% 0% 0% 0%;
+    margin-top: 10%;
+    margin-left: 20%;
+  padding: 10px 0px 10px 0;
+    width: 100%;
+  }
+  nav .array-inputs {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 40%;
+        grid-template-columns: 40% 60%;
+    place-content: center;
+    padding-top: 4%;
+    margin: 0% 15% 0px 15%;
+  }
+  nav .array-inputs > p{
+    margin-top: 5px ;
+    margin-bottom: 5px ;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }
 
-@media (min-width: 481px) and (max-width: 1250px)//Tablets
-{
-
-}
-
-@media (min-width: 1251px)//Laptops and up
-{
-
-}
-*/
 /*
     *****************
    inspired by clement mihailescu
     *****************
 */
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map
